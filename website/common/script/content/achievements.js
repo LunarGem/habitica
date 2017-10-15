@@ -71,6 +71,22 @@ let masterAchievs = {
   },
 };
 Object.assign(achievementsData, masterAchievs);
+//not sure about this but we'll see
+let collectionAchievs = {
+  petHatched: {
+    icon: 'achievement-hatch-pet',
+    titleKey: 'petHatchedName',
+    textKey: 'petHatchedText',
+    text2Key: 'petHatchedText2',
+  },
+  mountRaised: {
+    icon: 'achievement-raise-mount',
+    titleKey: 'mountRaisedName',
+    textKey: 'mountRaisedText',
+    text2Key: 'mountRaisedText2',
+  },
+};
+Object.assign(achievementsData, collectionAchievs);
 
 let basicAchievs = {
   partyUp: {
