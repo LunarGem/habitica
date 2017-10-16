@@ -87,6 +87,8 @@ let schema = new Schema({
     mountMasterCount: Number,
     triadBingo: Boolean,
     triadBingoCount: Number,
+    petCollector: Number,
+    mountCollector: Number,
     veteran: Boolean,
     snowball: Number,
     spookySparkles: Number,

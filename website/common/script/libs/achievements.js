@@ -101,6 +101,43 @@ function _addSimpleWithMasterCount (result, user, data) {
   });
 }
 
+function _addMultiIcon(result, user, data){
+  let language = data.language;
+  let value = user.achievements[data.path] || 0;;
+  let key = data.key || data.path;
+  let thisContent = achievsContent[key];
+  let titleKey;
+  let textKey;
+  if(value !== 1){
+    text = i18n.t(thisContent.text2Key)
+  }
+// If value === 1, use singular versions of strings.
+// If value !== 1, use plural versions of strings.
+  if (value === 1) {
+    titleKey = thisContent.singularTitleKey;
+    textKey = thisContent.singularTextKey;
+  } else {
+    titleKey = thisContent.pluralTitleKey;
+  }
+
+  let icon = thisContent.icons[0];
+  // Use the right icon based on the value
+  for (let i = 0; i < thisContent.rules.length; i++){
+    if (value >= thisContent.rules[i]){
+      icon = thisContent.icons[i];
+    }
+  }
+  _add(result, {
+    title: i18n.t(titleKey, { count: value }, data.language),
+    text: i18n.t(textKey, { count: value }, data.language),
+    icon,
+    key: data.path,
+    value,
+    optionalCount: value,
+    earned: Boolean(value),
+  });
+}
+
 function _addSimpleWithCount (result, user, data) {
   let value = user.achievements[data.path] || 0;
 
@@ -188,6 +225,9 @@ function _getBasicAchievements (user, language) {
   _addSimpleWithMasterCount(result, user, {path: 'beastMaster', language});
   _addSimpleWithMasterCount(result, user, {path: 'mountMaster', language});
   _addSimpleWithMasterCount(result, user, {path: 'triadBingo', language});
+
+  _addMultiIcon(result, user, { path: 'petHatched', language });
+  _addMultiIcon(result, user, { path: 'mountRaised', language });
 
   _addUltimateGear(result, user, {path: 'healer', language});
   _addUltimateGear(result, user, {path: 'rogue', language});
