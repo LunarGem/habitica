@@ -74,16 +74,20 @@ Object.assign(achievementsData, masterAchievs);
 //not sure about this but we'll see
 let collectionAchievs = {
   petHatched: {
-    icon: 'achievement-hatch-pet',
-    titleKey: 'petHatchedName',
-    textKey: 'petHatchedText',
-    text2Key: 'petHatchedText2',
+    icon: ['achievement-hatch-pet-1', 'achievement-hatch-pet-10', 'achievement-hatch-pet-25', 'achievement-hatch-pet-50'],
+    rules: [1, 10, 25, 50],
+    singularTitleKey: 'petHatchedName',
+    pluralTitleKey: 'petHatchedName2'
+    singularTextKey: 'petHatchedText',
+    pluralTextKey: 'petHatchedText2',
   },
   mountRaised: {
-    icon: 'achievement-raise-mount',
-    titleKey: 'mountRaisedName',
-    textKey: 'mountRaisedText',
-    text2Key: 'mountRaisedText2',
+    icon: ['achievement-raise-mount-1', 'achievement-raise-mount-10', 'achievement-raise-mount-25', 'achievement-raise-mount-50'],
+    rules: [1, 10, 25, 50],
+    singularTitleKey: 'mountRaisedName',
+    pluralTitleKey: 'mountRaisedName2',
+    singularTextKey: 'mountRaisedText',
+    pluralTextKey: 'mountRaisedText2',
   },
 };
 Object.assign(achievementsData, collectionAchievs);
