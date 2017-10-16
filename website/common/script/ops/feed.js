@@ -15,9 +15,20 @@ function evolve (user, pet, req) {
     user.items.currentPet = '';
   }
 
+  handleMountAchievs(user);
+
   return i18n.t('messageEvolve', {
     egg: pet.text(req.language),
   }, req.language);
+}
+
+function handleMountAchievs(_user){
+  //count number of mounts
+  var mountCount = 0;
+  for (var i in _user.items.mounts) {
+    if (_user.items.mounts[i]) mountCount++;
+  }
+  //TODO: award achievement
 }
 
 module.exports = function feed (user, req = {}) {

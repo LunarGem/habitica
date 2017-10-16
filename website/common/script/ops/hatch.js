@@ -7,6 +7,14 @@ import {
   NotFound,
 } from '../libs/errors';
 
+function handlePetAchievs(_user){
+  var petCount = 0;
+    for (var i in _user.items.pets) {
+      if (_user.items.pets[i]) petCount++;
+    }
+    //TODO: award achievement
+}
+
 module.exports = function hatch (user, req = {}) {
   let egg = get(req, 'params.egg');
   let hatchingPotion = get(req, 'params.hatchingPotion');
