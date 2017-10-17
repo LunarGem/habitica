@@ -368,7 +368,7 @@ export default {
   },
   watch: {
     searchText: throttle(function throttleSearch () {
-      this.searchTextThrottled = this.searchText.toLowerCase();
+      this.searchTextThrottled = this.searchText;
     }, 250),
   },
   methods: {
