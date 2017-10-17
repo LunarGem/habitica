@@ -404,6 +404,7 @@ export default {
       // Notifications
 
       // Sync
+      // @TODO add a loading spinner somewhere
       await Promise.all([
         this.$store.dispatch('user:fetch', {forceLoad: true}),
         this.$store.dispatch('tasks:fetchUserTasks', {forceLoad: true}),

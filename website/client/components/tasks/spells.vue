@@ -35,7 +35,7 @@ div(v-if='user.stats.lvl > 10')
 
 <style lang="scss" scoped>
   .drawer-container {
-    left: calc((100% - 978px) / 2);
+    left: 19%;
   }
 
   .drawer-slider {
