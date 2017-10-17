@@ -4,10 +4,9 @@
     "deleteToDosExplanation": "Aşağıdaki düğmeye tıkladığında, Grup Planları ve aktif mücadele Yapılacakları dışında, tamamlanmış tüm Yapılacaklar ve arşivlenmiş Yapılacaklar kalıcı olarak silinecektir. Eğer bir kopya saklamak istersen öncelikle bunları dışa aktar.",
     "addmultiple": "Çoklu Ekle",
     "addsingle": "Tek Ekle",
-    "addATask": "Add a <%= type %>",
     "editATask": "<%= type %> düzenle",
     "createTask": "Create <%= type %>",
-    "addTaskToUser": "Add Task",
+    "addTaskToUser": "Oluştur",
     "scheduled": "Zamanlı",
     "theseAreYourTasks": "These are your <%= taskType %>",
     "habit": "Alışkanlık",
@@ -199,6 +198,5 @@
     "yesterDailiesCallToAction": "Yeni Günüme Başla!",
     "yesterDailiesOptionTitle": "Zarar vermeden önce bu Günlük İşin yapılmadığını onayla",
     "yesterDailiesDescription": "Bu ayar uygulanıyorsa, avatarına zarar verme hesaplamasından önce Günlük İşi yapıp yapmadığını Habitica soracaktır. Bu, kasıtsız olarak hasar görmelerine karşı seni koruyabilir.",
-    "repeatDayError": "Lütfen haftanın en az bir gününün seçili olduğundan emin ol.",
-    "searchTasks": "Search titles and descriptions..."
+    "repeatDayError": "Lütfen haftanın en az bir gününün seçili olduğundan emin ol."
 }
