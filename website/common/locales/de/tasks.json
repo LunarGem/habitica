@@ -4,10 +4,9 @@
     "deleteToDosExplanation": "Wenn Du auf diesen Knopf klickst, werden alle Deine erfüllten und archivierten To-Dos dauerhaft gelöscht, mit Außnahme von To-Dos aus aktiven Wettbewerben und Gruppenplänen. Exportiere sie vorher, wenn Du sie nicht verlieren möchtest.",
     "addmultiple": "Mehrere hinzufügen",
     "addsingle": "Einzelne hinzufügen",
-    "addATask": "Add a <%= type %>",
     "editATask": "Ein/e <%= type %> bearbeiten",
     "createTask": " <%= type %> Erstellen",
-    "addTaskToUser": "Add Task",
+    "addTaskToUser": "Erstelle",
     "scheduled": "Datiert",
     "theseAreYourTasks": "Dies sind Deine <%= taskType %>",
     "habit": "Gewohnheit",
@@ -199,6 +198,5 @@
     "yesterDailiesCallToAction": "Starte meinen neuen Tag!",
     "yesterDailiesOptionTitle": "Bestätige, dass diese tägliche Aufgabe nicht erledigt wurde, bevor Schaden entsteht",
     "yesterDailiesDescription": "Falls diese Einstellung ausgewählt wird, wird Habitica Dich fragen, ob Du die tägliche Aufgabe absichtlich nicht abgehakt hast, bevor der Schaden an deinem Avatar berechnet und angewandt wird. Dies kann Dich vor unbeabsichtigtem Schaden schützen.",
-    "repeatDayError": "Bitte achte darauf, dass mindestens ein Wochentag ausgewählt ist.",
-    "searchTasks": "Search titles and descriptions..."
+    "repeatDayError": "Bitte achte darauf, dass mindestens ein Wochentag ausgewählt ist."
 }

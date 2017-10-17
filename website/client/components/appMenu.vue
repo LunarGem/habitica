@@ -62,8 +62,6 @@ div
       .item-with-icon
         .svg-icon(v-html="icons.gold")
         span {{Math.floor(user.stats.gp * 100) / 100}}
-      a.item-with-icon(@click="sync")
-        .svg-icon(v-html="icons.sync")
       notification-menu
       a.dropdown.item-with-icon.item-user
         span.message-count.top-count(v-if='user.inbox.newMessages > 0') {{user.inbox.newMessages}}
@@ -238,16 +236,7 @@ div
     padding-left: 16px;
     white-space: nowrap;
 
-    span {
-      font-weight: bold;
-    }
-
-    &:hover .svg-icon {
-      color: $white;
-    }
-
     .svg-icon {
-      color: $header-color;
       vertical-align: bottom;
       display: inline-block;
       width: 20px;
@@ -265,6 +254,11 @@ div
 
     .svg-icon {
       margin-right: 0px;
+      color: $header-color;
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 
@@ -283,19 +277,18 @@ div
   }
 
   .message-count {
-    background-color: $blue-50;
+    background-color: #46a7d9;
     border-radius: 50%;
     height: 20px;
     width: 20px;
     float: right;
-    color: $white;
+    color: #fff;
     text-align: center;
     font-weight: bold;
     font-size: 12px;
   }
 
   .message-count.top-count {
-    background-color: $red-50;
     position: absolute;
     right: 0;
     top: .5em;
@@ -312,7 +305,6 @@ import { mapState, mapGetters } from 'client/libs/store';
 import * as Analytics from 'client/libs/analytics';
 import gemIcon from 'assets/svg/gem.svg';
 import goldIcon from 'assets/svg/gold.svg';
-import syncIcon from 'assets/svg/sync.svg';
 import userIcon from 'assets/svg/user.svg';
 import svgHourglasses from 'assets/svg/hourglass.svg';
 import logo from 'assets/svg/logo.svg';
@@ -338,7 +330,6 @@ export default {
         gold: goldIcon,
         user: userIcon,
         hourglasses: svgHourglasses,
-        sync: syncIcon,
         logo,
       }),
     };
@@ -357,12 +348,6 @@ export default {
     this.getUserGroupPlans();
   },
   methods: {
-    sync () {
-      return Promise.all([
-        this.$store.dispatch('user:fetch', {forceLoad: true}),
-        this.$store.dispatch('tasks:fetchUserTasks', {forceLoad: true}),
-      ]);
-    },
     logout () {
       this.$store.dispatch('auth:logout');
     },

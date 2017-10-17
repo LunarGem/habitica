@@ -58,12 +58,12 @@ div.item-with-icon.item-notifications.dropdown
   @import '~client/assets/scss/colors.scss';
 
   .message-count {
-    background-color: $blue-50;
+    background-color: #46a7d9;
     border-radius: 50%;
     height: 20px;
     width: 20px;
     float: right;
-    color: $white;
+    color: #fff;
     text-align: center;
     font-weight: bold;
     font-size: 12px;
@@ -74,7 +74,6 @@ div.item-with-icon.item-notifications.dropdown
     right: -.5em;
     top: .5em;
     padding: .2em;
-    background-color: $red-50;
   }
 
   .clear-button {
@@ -90,7 +89,6 @@ div.item-with-icon.item-notifications.dropdown
   }
 
   .notifications {
-    color: $header-color;
     vertical-align: bottom;
     display: inline-block;
     width: 20px;
@@ -98,12 +96,6 @@ div.item-with-icon.item-notifications.dropdown
     margin-right: 8px;
     margin-left: 8px;
     margin-top: .2em;
-  }
-
-  .item-with-icon:hover {
-    .svg-icon {
-      color: $white;
-    }
   }
 
   .user-dropdown {

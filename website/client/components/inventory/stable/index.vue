@@ -831,8 +831,7 @@
 
         let countAll = animals.length;
         let countOwned = _filter(animals, (a) => {
-          // when counting pets, include those that have been raised into mounts
-          return a.isOwned() || a.mountOwned();
+          return a.isOwned();
         });
 
         return `${countOwned.length}/${countAll}`;
